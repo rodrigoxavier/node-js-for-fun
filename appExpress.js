@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 app.use(logger); //Everything after this will use the logger.
+app.use(express.urlencoded({ extended: true }));
 
 const practicingStatusRouter = require('./routes/practicingStatusRouter');
 const usersRoter = require('./routes/users');
